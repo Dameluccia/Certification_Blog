@@ -13,7 +13,9 @@ a:hover {
   cursor: url(http://cur.cursors-4u.net/symbols/sym-1/sym46.cur), progress !important;
   text-decoration:none;
 }
-
+img{
+  border-radius: 5px;
+}
 li {
   list-style-type: none; }
 
@@ -37,15 +39,12 @@ label {
 /*logo navbar*/
 .navbar-brand {
   color: #23B697; }
-
 .fa fa-search {
   color: #777; }
   .fa fa-search :hover {
     color: #23B697; }
-
 .navbar-default .navbar-nav > .open > a, .nav .open > a, .navbar-default .navbar-nav > .open > a:focus {
   background-color: white; }
-
 .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover, .dropdown-menu > li > a:hover
 , .dropdown-menu > li > a:focus {
   color: #23B697;
@@ -115,11 +114,13 @@ label {
     width: 100%;
     margin-bottom: 1em;
     color: #555;
-    padding:0;
+    padding:0 10px;
    }
 
 .form-control {
-  font-size: 20px; }
+  font-size: 20px;
+  padding: 0px;
+}
 
 @media (min-width: 768px) {
   .edit_profile {
@@ -150,7 +151,8 @@ label {
 .thumbnail{
   position: relative;
   height: 200px;
-  overflow: hidden; }
+  overflow: hidden;
+  border: 1px #F9D6BB solid}
   .thumbnail i {
     color: white;
     padding: 10px;
@@ -162,6 +164,7 @@ label {
   padding: 10px;
 
 }
+
 .thumbnail p {
   bottom: 30px;
   position: relative;
@@ -171,32 +174,27 @@ label {
   margin: 0;
   text-align: center;
  }
+ .thumbnail a {
+   color: white;
+   font-size: 1em;
+   border: 1px solid;
+   padding: 0 10px; }
 
 .thumbnail img {
   position: absolute;
   left: 50%;
   top: 50%;
   height: 100%;
-  width: auto;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }
-
-.thumbnail img.portrait {
-  width: 100%;
-  height: auto; }
-
-.thumbnail a {
-  color: white;
-  font-size: 1em;
-  border: 1px solid;
-  padding: 0 10px; }
-
+.thumbnail a>img{
+  max-width: 125%;
+}
 .btn.focus, .btn:focus, .btn:hover {
   color: #00ffa5;
   background-color: rgba(21, 47, 38, 0.64);
 }
-
 .pagination {
   width: 100%; }
 
