@@ -1,0 +1,237 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Just Me Again Down Here', cursive;
+  color: #555; }
+
+body {
+  height: 100%; }
+
+a {
+  color: #23B697; }
+a:hover {
+  cursor: url(http://cur.cursors-4u.net/symbols/sym-1/sym46.cur), progress !important;
+  text-decoration:none;
+}
+
+li {
+  list-style-type: none; }
+
+/* End http://www.cursors-4u.com */
+main {
+  font-size: 25px;
+  background-color: cornsilk; }
+
+h1 {
+  font-size: 2em;
+  color: #23B697;
+  font-family: 'Kranky', cursive;
+  padding-top: 1em; }
+
+label {
+
+  display: block;
+  font-weight: normal;
+  font-size: 25px; }
+
+/*logo navbar*/
+.navbar-brand {
+  color: #23B697; }
+
+.fa fa-search {
+  color: #777; }
+  .fa fa-search :hover {
+    color: #23B697; }
+
+.navbar-default .navbar-nav > .open > a, .nav .open > a, .navbar-default .navbar-nav > .open > a:focus {
+  background-color: white; }
+
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover, .dropdown-menu > li > a:hover
+, .dropdown-menu > li > a:focus {
+  color: #23B697;
+  background-color: white; }
+
+.navbar-default {
+  background-color: white;
+  border: none;
+  margin-bottom: 0;
+  font-size: 2em;
+  padding: 10px 0; }
+  .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
+    color: #23B697; }
+
+.navbar-form {
+  margin: 0; }
+
+#id_image {
+  padding: 2px; }
+#id_avatar{
+  padding: 2px
+  ;
+}
+#draft_color {
+  color: red; }
+
+.first_letter {
+  font-family: 'Kranky', cursive;
+  color: #23B697; }
+
+@media (min-width: 768px) {
+  .navbar-form .form-group {
+    vertical-align: baseline; } }
+.post_view {
+  padding-bottom: 3em;
+  padding-top: 4em; }
+  .post_view i {
+    color: #23B697; }
+  .post_view span {
+    font-size: 17px;
+    font-style: italic;
+    color: #23B697; }
+
+#logo_navbar {
+  width: 49px;
+  position: relative;
+  top: -15px; }
+
+#logo_name {
+  font-family: 'Kranky', cursive; }
+
+.dropdown-menu > li > a {
+  font-size: 25px;
+  color: #555; }
+
+.form_creation_post, .form_connexion {
+  margin-bottom: 15px;
+  font-size: 20px;
+  border-radius: 5px;
+  padding: 30px 40px;
+  margin: 45px 0; }
+
+
+  .form_creation_post div input, .form_creation_post div textarea, .form_connexion div input, .form_connexion div textarea {
+    border: 1px solid #23B697;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 1em;
+    color: #555;
+    padding:0;
+   }
+
+.form-control {
+  font-size: 20px; }
+
+@media (min-width: 768px) {
+  .edit_profile {
+    margin-top: 5.5em;
+    margin-bottom: 5.5em; }
+    .edit_profile div {
+      font-size: 30px; }
+    .edit_profile img {
+      border-radius: 5px; } }
+.edit_profile {
+  margin-right: 0;
+  margin-left: 0;
+  width: 100%;
+  line-height: 1.5em;
+  text-align: center; }
+  .edit_profile img {
+    border-radius: 5px; }
+
+#ul_choice_avatar ul li {
+  display: inline-block; }
+
+.avatar {
+  border-radius: 5px; }
+
+.text_list {
+  margin: 2em 0 4em 0; }
+
+.thumbnail{
+  position: relative;
+  height: 200px;
+  overflow: hidden; }
+  .thumbnail i {
+    color: white;
+    padding: 10px;
+     }
+  .thumbnail i:hover {
+    color: #00ffa5;
+  }
+.button_title_list{
+  padding: 10px;
+
+}
+.thumbnail p {
+  bottom: 30px;
+  position: relative;
+  color: #00ffa5;
+  font-family: 'Kranky', cursive;
+  font-size: 30px;
+  margin: 0;
+  text-align: center;
+ }
+
+.thumbnail img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 100%;
+  width: auto;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+
+.thumbnail img.portrait {
+  width: 100%;
+  height: auto; }
+
+.thumbnail a {
+  color: white;
+  font-size: 1em;
+  border: 1px solid;
+  padding: 0 10px; }
+
+.btn.focus, .btn:focus, .btn:hover {
+  color: #00ffa5;
+  background-color: rgba(21, 47, 38, 0.64);
+}
+
+.pagination {
+  width: 100%; }
+
+.current {
+  text-align: center;
+  display: inline-block;
+  width: 100%; }
+
+.text-center {
+  padding: 25px 0px; }
+  .text-center i {
+    color: #23B697; }
+
+.fa-2x {
+  text-align: center;
+  margin: auto;
+  color: #23B697;
+  width: 100%; }
+
+#social-fb:hover {
+  color: #3B5998; }
+
+#social-tw:hover {
+  color: #4099FF; }
+
+#social-gp:hover {
+  color: #d34836; }
+
+#social-em:hover {
+  color: #f39c12; }
+
+#social-yt:hover {
+  color: #f60606; }
+
+#social-mt:hover {
+  color: #42a10f; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+
+{% block title %}{{ title }}{% endblock title %}
+
+
+{% block content %}
+<h1>Présentation</h1>
+<div class="row">
+  <div class="col-xs-12 col-md-6 col-md-offset-3">
+    <div class="text_list">
+      <p>
+        <span class="first_letter">D</span>essins uniquement créés via le logiciel <span class="first_letter"> Windows paint</span> et à l'aide d'une souris, non pas une tablette graphique.
+        <br>Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse <span class="first_letter">dolore</span> cillum  eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </div>
+
+  </div>
+</div>
+
+<div class="row">
+  {% for object in object_list %}
+  {% if forloop.counter0|divisibleby:3 %}</div><div class="row">{% endif %}
+    <div class="col-md-4">
+      <div class="thumbnail">
+        {% if object.image %}
+        <a href="{{ object.get_absolute_url }}" class="btn btn-secondary" role="button"><img src="{{ object.image.url }}" alt="" class="portrait" /></a>
+        {% endif %}
+        <div class="caption">
+          <h3>
+            <span>{{object.publish}}</span>
+          </h3>
+          <p><a href="{{ object.get_absolute_url }}" class="btn btn-secondary" role="button">{{ object.title }}</a></p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+
+  <div class="pagination">
+    <span class="step-links">
+
+      <span class="current">
+        {% if object_list.has_previous %}
+        <a href="?page={{ object_list.previous_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}"> << </a>
+        {% endif %}
+        Page {{ object_list.number }} sur {{ object_list.paginator.num_pages }}
+        {% if object_list.has_next %}
+        <a href="?page={{ object_list.next_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}"> >> </a>
+        {% endif %}
+      </span>
+
+    </span>
+  </div>
+</div>
+
+{% endblock %}

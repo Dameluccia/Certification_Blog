@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}Création d'articles{% endblock title %}
+{% block content %}
+
+<h1>Création d'articles</h1>
+<div class="col-md-6 col-md-offset-3">
+<form class="form-group form_creation_post"  method="POST" action="" enctype="multipart/form-data">
+  <div class="">
+  {% csrf_token %}
+  <div class="form-group">
+
+  {{ form.title.label_tag }}
+  {{ form.title }}
+</div>
+
+  <div class="form-group">
+
+  {{ form.image.label_tag }}
+  {{ form.image }}
+</div>
+
+  <div class="form-group">
+
+  {{ form.content.label_tag }}
+  {{ form.content }}
+</div>
+
+  <div class="draft_check form-group">
+
+
+    {{ form.draft.label_tag }}
+    {{ form.draft }}
+  </div>
+
+  </div>
+  <div class="form-group">
+
+  {{ form.publish.label_tag }}
+  {{ form.publish }}
+</div>
+
+  <input type='submit' class="btn btn-default" value='Create Post'/>
+</div>
+</form>
+</div>
+{% endblock %}

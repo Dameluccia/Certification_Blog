@@ -1,0 +1,5 @@
+bower_components
+*.pyc
+media
+*.db
+site_settings.py
