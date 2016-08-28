@@ -6,9 +6,9 @@
 {% block title %}{{ instance.title }}{% endblock title %}
 {% block content %}
 
+<h1>{{ title }}</h1>
 <div class="row post_view">
   <div class="col-md-6 col-md-offset-3">
-    <h1>{{ title }}</h1>
     {% if instance.draft %}
     <p id="draft_color">Brouillon</p>
     {% endif %}
@@ -17,7 +17,7 @@
     {% endif %}
     <span>Publié le {{ instance.publish }}</span>
     <ul>
-      <li>{{ instance.content | linebreaks }}</li>
+      <li class="content-markdown">{{ instance.content | safe }}</li>
     </ul>
     {% if user.is_staff %}
     <a href="{% url 'update' instance.slug %}"><i class="fa fa-pencil" aria-hidden="true"></i></a>

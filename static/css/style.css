@@ -61,7 +61,10 @@ label {
 
 .navbar-form {
   margin: 0; }
-
+.dropdown-toggle img{
+  width: 15px;
+  height: 15px;
+}
 #id_image {
   padding: 2px; }
 #id_avatar{
@@ -83,6 +86,9 @@ label {
   padding-top: 4em; }
   .post_view i {
     color: #23B697; }
+    .post_view i:hover {
+      color: #f26810; }
+
   .post_view span {
     font-size: 17px;
     font-style: italic;
@@ -107,7 +113,9 @@ label {
   padding: 30px 40px;
   margin: 45px 0; }
 
-
+.wmd-wrapper .wmd-panel{
+  margin: 0;
+}
   .form_creation_post div input, .form_creation_post div textarea, .form_connexion div input, .form_connexion div textarea {
     border: 1px solid #23B697;
     border-radius: 5px;
@@ -119,7 +127,7 @@ label {
 
 .form-control {
   font-size: 20px;
-  padding: 0px;
+  padding: 0 10px;
 }
 
 @media (min-width: 768px) {

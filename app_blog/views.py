@@ -38,6 +38,12 @@ def post_list(request):
 @permission_required('app_blog.Can_delete_permission')
 def draft_list(request):
     queryset_list =Post.objects.filter(Q(draft=True) | Q(publish__gt=timezone.now())).order_by("-timestamp")
+    query = request.GET.get("q")
+    if query:
+        queryset_list = queryset_list.filter(
+        Q(title__icontains=query) |
+        Q(content__icontains=query)
+        ).distinct()
     # all().order_by("-timestamp","-updated")
     paginator = Paginator(queryset_list, 9) # Show 5 articles per page
     page = request.GET.get('page')
@@ -121,14 +127,17 @@ def user_profile(request, id):
 @login_required
 def user_update(request, id):
     instance = get_object_or_404(User, id=id)
-    # form = UserForm(request.POST or None, instance=instance)
-    form = UserForm(request.POST or None,instance=instance)
 
-    if form.is_valid():
-        instance = form.save(commit=False)
-        instance.save()
+    form = UserForm(request.POST or None,instance=instance)
+    if request.user.id == instance.id :
+
+        if form.is_valid():
+            instance = form.save(commit=False)
+            instance.save()
+            return redirect(reverse('profile', args=[request.user.id]))
+        context = {
+        "form" : form,
+        }
+        return render(request,'user_update.html',context)
+    else:
         return redirect(reverse('profile', args=[request.user.id]))
-    context = {
-    "form" : form,
-    }
-    return render(request,'user_update.html',context)

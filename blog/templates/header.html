@@ -1,7 +1,9 @@
 
 {% load staticfiles %}
+{% load avatar_tags %}
+
 <header>
-  <nav class="navbar navbar-default">
+  <nav class="navbar navbar-default navi">
    <div class="container-fluid">
      <!-- Brand and toggle get grouped for better mobile display -->
      <div class="navbar-header">
@@ -35,7 +37,7 @@
            <button type="submit" class="btn btn-default"><i class="fa fa-search" aria-hidden="true" style="color:#23B697"></i></button>
          </form>
          <li class="dropdown">
-           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mon compte <span class="caret"></span></a>
+           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mon compte {% avatar user %}<span class="caret"></span></a>
            <ul class="dropdown-menu">
              <li><a href="{% url 'profile' request.user.id %}">Voir mon profil</a></li>
              <li role="separator" class="divider"></li>

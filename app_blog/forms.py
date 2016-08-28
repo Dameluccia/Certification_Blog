@@ -1,8 +1,10 @@
 from django import forms
+from pagedown.widgets import PagedownWidget
 from .models import Post, User
 
-
 class PostForm(forms.ModelForm):
+    content = forms.CharField(widget=PagedownWidget)
+    publish = forms.DateField(widget=forms.SelectDateWidget)
     class Meta:
         model = Post
         fields = [
@@ -20,7 +22,7 @@ class PostForm(forms.ModelForm):
         "publish":"Publication"
         }
         widgets={
-        "publish": forms.DateInput(attrs={"placeholder":"Aujourd'hui"})
+        "publish": forms.DateInput(attrs={"placeholder":"Aujourd'hui"},)
         }
 
 

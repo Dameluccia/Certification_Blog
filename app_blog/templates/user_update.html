@@ -8,31 +8,22 @@
 <form class="form_creation_post"  method="POST" action="" enctype="multipart/form-data">
   {% csrf_token %}
   <div class="form-group">
-
   {{ form.username.label_tag }}
   {{ form.username }}
 </div>
-
   <div class="form-group">
-
   {{ form.email.label_tag }}
   {{ form.email }}
 </div>
-
   <div class="form-group">
-
   {{ form.first_name.label_tag}}
   {{ form.first_name}}
 </div>
-
   <div class="form-group">
-
   {{ form.last_name.label_tag}}
   {{ form.last_name}}
 </div>
-
   <input type='submit' class="btn btn-default" value='Envoyer'/>
-
 </form>
 </div>
 {% endblock %}
